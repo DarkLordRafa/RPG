@@ -3,7 +3,7 @@
 
 <div align="center">
   <p>
-  App desenvolvido para salvar as fichas de personagens de um RPG de mesa
+  App desenvolvido para salvar as fichas de personagens de um RPG de mesa utilizando a Web API localStorage
   </p>
   
   <h2>O que foi utilizado no projeto:</h2>
