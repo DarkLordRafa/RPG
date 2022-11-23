@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Noto";
+  src: url("../fonts/Noto.ttf")
+  format("truetype");
+}
+
+@font-face {
+  font-family: "Marker";
+  src: url("../fonts/Marker.ttf")
+  format("truetype");
+}
+
+@font-face {
+  font-family: "Aleo";
+  src: url("../fonts/Aleo.otf")
+  format("truetype");
+}
+
+
+.vaarkis-page{
+	background-image: url("../images/general/vaarkis.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.alex-page{
+	background-image: url("../images/general/alex.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.alexandria-page{
+	background-image: url("../images/general/alexandria.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.character-name{
+	font-family: "Noto";
+	font-size: 7vw;
+	color: white;
+}
+
+.attributes-area{
+	bottom: 0;
+	left: 0;
+	background-image: url("../images/general/attributes_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	height: 50vh;
+	width: 75vw;
+	transition: 0.7s;
+}
+
+.attributes-area h2{
+	font-family: "Marker";
+	font-size: 7.5vw;
+	color: black;
+}
+
+.attributes-area ul li{
+	font-size: 5.5vw;
+	font-family: "Aleo";
+	font-weight: bold;
+	color: black;
+	width: 80%;
+}
+
+.attributes-area .block2{
+	font-size: 7vw;
+}
+
+.attributes-area ul li img{
+	height: 8vw;
+}
+
+#reset-button{
+	font-family: Arial, Sans-Serif;
+	font-size: 5.5vw;
+	font-weight: 900;
+	text-decoration: underline;
+}
+
+.confirm-reset-screen__content{
+	background-color: #e1c598;
+	margin-top: 40vh;
+	text-align: center;
+}
+
+.confirm-reset-screen h3{
+	font-family: Arial, Sans-Serif;
+	font-size: 6vw;
+	font-weight: bold;
+	color: black;
+}
+
+.confirm-reset-button, .cancel-reset-button{
+	font-family: "Marker";
+	font-size: 6vw;
+	color: black;
+	background-color: #CD7F32;
+	padding: 1vw;
+	border-radius: 5px;
+	min-width: 25vw;
+	border: 4px solid #A0522D;
+}
+
+.confirm-reset-button:hover, .cancel-reset-button:hover{
+	background-color: #8B4513;
+}
+
+.return-button{
+	top: 5vh;
+	left: 5vw;
+}
+
+.return-button img{
+	height: 15vw;
+}
+
+.character-attributes-toggle-button{
+	background-color: #e1c598;
+	border-radius: 5px;
+	height: 7vh;
+	width: 9vh;
+	top: 34vh;
+	left: 3vw;
+	transition: opacity 0.7s;
+}
+
+.character-attributes-toggle-button img{
+	height: 90%;
+	width: 90%;
+	object-fit: contain;
+}
+
+.character-attributes-toggle-button:active{
+	background-color: #8B4513;
+}
+
+.attributes-area-disabled{
+	transform: translateX(-75vw);
+}
+
+.character-attributes-toggle-button-hidden{
+	opacity: 0.5;
+}

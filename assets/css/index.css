@@ -1,0 +1,36 @@
+
+@font-face {
+  font-family: "Noto";
+  src: url("../fonts/Noto.ttf")
+  format("truetype");
+}
+
+body{
+	background-image: url("../images/general/bg4.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.menu{
+	font-family: "Noto";
+	font-size: 6vw;
+	margin-top: 25vh;
+}
+
+.menu a{
+	color: white!important;
+	text-decoration: none;
+	background-color: #CD7F32;
+	padding: 3vw;
+	border-radius: 10px;
+	display: inline-block;
+	min-width: 45vw;
+	text-align: center;
+	border: 4px solid #A0522D;
+}
+
+.menu ul li a:hover{
+	background-color: #8B4513;
+}
+
