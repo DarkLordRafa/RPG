@@ -36,6 +36,20 @@ function decreaseAttribute(propertyName, element){
 	element.innerHTML = alex[propertyName];
 }
 
+function displayAttributes(){
+	strengthAttribute.innerHTML = alex.strength;
+	defenseAttribute.innerHTML = alex.defense;
+	agilityAttribute.innerHTML = alex.agility;
+	perceptionAttribute.innerHTML = alex.perception;
+}
+
+function resetAttributes(){
+	window.localStorage.removeItem("alex_key");
+	getAlex();
+	displayAttributes();
+	confirmResetScreen.classList.add("d-none");
+}
+
 
 const getAlex = () =>{
 	try {
@@ -60,6 +74,7 @@ const getAlex = () =>{
 };
 
 getAlex();
+
 
 
 
@@ -106,8 +121,7 @@ resetButton.addEventListener("click", function(){
 });
 
 confirmResetButton.addEventListener("click", function(){
-	window.localStorage.removeItem("alex_key");
-		location.reload();
+	resetAttributes();
 });
 
 cancelResetButton.addEventListener("click", function(){

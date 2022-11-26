@@ -36,6 +36,20 @@ function decreaseAttribute(propertyName, element){
 	element.innerHTML = vaarkis[propertyName];
 }
 
+function displayAttributes(){
+	strengthAttribute.innerHTML = vaarkis.strength;
+	defenseAttribute.innerHTML = vaarkis.defense;
+	agilityAttribute.innerHTML = vaarkis.agility;
+	perceptionAttribute.innerHTML = vaarkis.perception;
+}
+
+function resetAttributes(){
+	window.localStorage.removeItem("vaarkis_key");
+	getVaarkis();
+	displayAttributes();
+	confirmResetScreen.classList.add("d-none");
+}
+
 
 const getVaarkis = () =>{
 	try {
@@ -60,6 +74,7 @@ const getVaarkis = () =>{
 };
 
 getVaarkis();
+
 
 
 
@@ -106,8 +121,7 @@ resetButton.addEventListener("click", function(){
 });
 
 confirmResetButton.addEventListener("click", function(){
-	window.localStorage.removeItem("vaarkis_key");
-		location.reload();
+	resetAttributes();
 });
 
 cancelResetButton.addEventListener("click", function(){

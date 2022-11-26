@@ -36,6 +36,20 @@ function decreaseAttribute(propertyName, element){
 	element.innerHTML = alexandria[propertyName];
 }
 
+function displayAttributes(){
+	strengthAttribute.innerHTML = alexandria.strength;
+	defenseAttribute.innerHTML = alexandria.defense;
+	agilityAttribute.innerHTML = alexandria.agility;
+	perceptionAttribute.innerHTML = alexandria.perception;
+}
+
+function resetAttributes(){
+	window.localStorage.removeItem("alexandria_key");
+	getAlexandria();
+	displayAttributes();
+	confirmResetScreen.classList.add("d-none");
+}
+
 
 const getAlexandria = () =>{
 	try {
@@ -60,6 +74,7 @@ const getAlexandria = () =>{
 };
 
 getAlexandria();
+
 
 
 
@@ -106,8 +121,7 @@ resetButton.addEventListener("click", function(){
 });
 
 confirmResetButton.addEventListener("click", function(){
-	window.localStorage.removeItem("alexandria_key");
-		location.reload();
+	resetAttributes();
 });
 
 cancelResetButton.addEventListener("click", function(){
