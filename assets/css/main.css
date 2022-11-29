@@ -44,25 +44,33 @@
 	color: white;
 }
 
-.attributes-area{
+.stats-area{
 	bottom: 0;
 	left: 0;
-	background-image: url("../images/general/attributes_bg.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 100% 100%;
 	height: 90vw;
 	width: 75vw;
 	transition: 0.7s;
 }
 
-.attributes-area h2{
+.attributes-area, .skills-area, .skill-description{
+	background-image: url("../images/general/attributes_bg.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	height: 100%;
+}
+
+.stats-area ul{
+	width: 75vw;
+}
+
+.stats-area h2{
 	font-family: "Marker";
 	font-size: 7.5vw;
 	color: black;
 }
 
-.attributes-area ul li{
+.stats-area ul li{
 	font-size: 5.5vw;
 	font-family: "Aleo";
 	font-weight: bold;
@@ -70,12 +78,14 @@
 	width: 80%;
 }
 
-.attributes-area .block2{
+.stats-area .block2{
 	font-size: 7vw;
 }
 
-.attributes-area ul li img{
+.stats-area ul li img{
 	height: 8vw;
+	width: 8vw;
+	object-fit: contain;
 }
 
 #reset-button{
@@ -83,6 +93,8 @@
 	font-size: 5.5vw;
 	font-weight: 900;
 	text-decoration: underline;
+	bottom: 5vw;
+	z-index: 5;
 }
 
 .confirm-reset-screen__content{
@@ -122,7 +134,7 @@
 	height: 15vw;
 }
 
-.character-attributes-toggle-button{
+.character-stats-toggle-button{
 	background-color: #e1c598;
 	border-radius: 5px;
 	height: 7vh;
@@ -132,20 +144,108 @@
 	transition: opacity 0.7s;
 }
 
-.character-attributes-toggle-button img{
+.character-stats-toggle-button img{
 	height: 90%;
 	width: 90%;
 	object-fit: contain;
 }
 
-.character-attributes-toggle-button:active{
+.character-stats-toggle-button:active{
 	background-color: #8B4513;
 }
 
-.attributes-area-disabled{
+.stats-area-disabled{
 	transform: translateX(-75vw);
 }
 
-.character-attributes-toggle-button-hidden{
+.character-stats-toggle-button-hidden{
 	opacity: 0.5;
 }
+
+.skills-area li{
+	font-size: 5vw!important;
+}
+
+.hp-mp-text{
+	font-size: 4.5vw;
+	font-family: "Aleo";
+	font-weight: bold;
+	color: black;
+}
+
+.life-bar-area, .mana-bar-area{
+	width: 60vw;
+	height: 7vw;
+	border: 2px solid black;
+	text-align: center;
+	position: relative;
+}
+
+
+.life-bar, .mana-bar{
+	position: absolute;
+	height: 100%;
+	z-index: 1;
+}
+
+.life-bar{
+	background-color: red;
+	width: 100%;
+	transition: 0.5s;
+}
+
+.mana-bar{
+	background-color: blue;
+	width: 100%;
+	transition: 0.5s;
+}
+
+.character-stats-switch-button{
+	background-color: #e1c598;
+	border-radius: 5px;
+	height: 5vh;
+	width: 7vh;
+	bottom: calc(90vw);
+	left: 55vw;
+	transition: opacity 0.7s;
+}
+
+.character-stats-switch-button img{
+	height: 90%;
+	width: 90%;
+	object-fit: contain;
+}
+
+.character-stats-switch-button:active{
+	background-color: #8B4513;
+}
+
+.life-value, .mana-value{
+	position: absolute;
+	z-index: 2;
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+
+.skill-description{
+	width: 100%;
+	z-index: 6;
+}
+
+.skill-description .close-button{
+	font-size: 8vw;
+	font-family: Arial;
+	font-weight: bold;
+	color: black;
+}
+
+.skill-description p{
+	font-size: 5vw;
+	font-family: "Aleo";
+	font-weight: bold;
+	color: black;
+}
+

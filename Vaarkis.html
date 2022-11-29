@@ -26,91 +26,171 @@
 				</a>
 			</div>
 			
-			<div class="character-attributes-toggle-button position-absolute d-flex justify-content-center align-items-center">
+			<div class="character-stats-toggle-button position-absolute d-flex justify-content-center align-items-center">
 				<img src="assets/images/icons/toggle_button.png" />
 			</div>
 			
-			<div class="attributes-area position-absolute d-flex flex-column align-items-center">
-				<h2 class="mt-3">Atributos</h2>
-				<ul class="ps-0 mb-0 mt-3 d-flex flex-column justify-content-center align-items-center w-100">
-					<li class="mb-2 d-flex align-items-center justify-content-between">
-						<div class="block1 d-flex align-items-center">
-							<img class="me-2" src="assets/images/icons/strength.png" />
-							<span class="attribute">
-								Força
-							</span>
+			<div class="character-stats-switch-button position-absolute d-flex justify-content-center align-items-center">
+				<img src="assets/images/icons/switch.png" />
+			</div>
+			
+			<div class="stats-area position-absolute d-flex flex-column align-items-center">
+				<div class="attributes-area d-flex flex-column align-items-center position-absolute">
+					<h2 class="mt-3">Atributos</h2>
+					<ul class="ps-0 mb-0 mt-3 d-flex flex-column justify-content-center align-items-center">
+						<li class="mb-2 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/strength.png" />
+								<span class="attribute">
+									Força
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="strength-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="strength">
+									1
+								</span>
+								<span class="attribute-icon" id="strength-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="mb-2 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/defense.png" />
+								<span class="attribute">
+									Defesa
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="defense-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="defense">
+									1
+								</span>
+								<span class="attribute-icon" id="defense-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="mb-2 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/agility.png" />
+								<span class="attribute">
+									Agilidade
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="agility-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="agility">
+									1
+								</span>
+								<span class="attribute-icon" id="agility-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/perception.png" />
+								<span class="attribute">
+									Percepção
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="perception-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="perception">
+									1
+								</span>
+								<span class="attribute-icon" id="perception-increase">
+									+
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="skills-area d-flex flex-column align-items-center position-absolute d-none">
+					<h2 class="mt-3">Habilidades</h2>
+					<ul class="ps-0 mb-0 mt-3 d-flex flex-column justify-content-center align-items-center">
+						<li class="mb-2 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/vaarkis_skill1.png" />
+								<span class="skill" id="skill1-label">
+									Hemomancia
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="skill1-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="skill1">
+									1
+								</span>
+								<span class="attribute-icon" id="skill1-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="mb-2 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/vaarkis_skill2.png" />
+								<span class="skill" id="skill2-label">
+									Frenesi
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="skill2-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="skill2">
+									1
+								</span>
+								<span class="attribute-icon" id="skill2-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="mb-2 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/transform.png" />
+								<span class="skill">
+									Transformação
+								</span>
+							</div>
+						</li>
+					</ul>
+					<span class="hp-mp-text">Vida</span>
+					<div class="life-bar-area">
+						<div class="life-bar">
 						</div>
-						<div class="block2 d-flex justify-content-center align-items-center">
-							<span class="attribute-icon" id="strength-decrease">
-								-
-							</span>
-							<span class="ms-3 me-3" id="strength">
-								1
-							</span>
-							<span class="attribute-icon" id="strength-increase">
-								+
-							</span>
+						<span class="life-value">
+							1
+						</span>
+					</div>
+					<span class="hp-mp-text">Mana</span>
+					<div class="mana-bar-area">
+						<div class="mana-bar">
 						</div>
-					</li>
-					<li class="mb-2 d-flex align-items-center justify-content-between">
-						<div class="block1 d-flex align-items-center">
-							<img class="me-2" src="assets/images/icons/defense.png" />
-							<span class="attribute">
-								Defesa
-							</span>
-						</div>
-						<div class="block2 d-flex justify-content-center align-items-center">
-							<span class="attribute-icon" id="defense-decrease">
-								-
-							</span>
-							<span class="ms-3 me-3" id="defense">
-								1
-							</span>
-							<span class="attribute-icon" id="defense-increase">
-								+
-							</span>
-						</div>
-					</li>
-					<li class="mb-2 d-flex align-items-center justify-content-between">
-						<div class="block1 d-flex align-items-center">
-							<img class="me-2" src="assets/images/icons/agility.png" />
-							<span class="attribute">
-								Agilidade
-							</span>
-						</div>
-						<div class="block2 d-flex justify-content-center align-items-center">
-							<span class="attribute-icon" id="agility-decrease">
-								-
-							</span>
-							<span class="ms-3 me-3" id="agility">
-								1
-							</span>
-							<span class="attribute-icon" id="agility-increase">
-								+
-							</span>
-						</div>
-					</li>
-					<li class="d-flex align-items-center justify-content-between">
-						<div class="block1 d-flex align-items-center">
-							<img class="me-2" src="assets/images/icons/perception.png" />
-							<span class="attribute">
-								Percepção
-							</span>
-						</div>
-						<div class="block2 d-flex justify-content-center align-items-center">
-							<span class="attribute-icon" id="perception-decrease">
-								-
-							</span>
-							<span class="ms-3 me-3" id="perception">
-								1
-							</span>
-							<span class="attribute-icon" id="perception-increase">
-								+
-							</span>
-						</div>
-					</li>
-				</ul>
-				<span class="mt-4" id="reset-button">Redefinir</span>
+						<span class="mana-value">
+							1
+						</span>
+					</div>
+				</div>
+				
+				<div class="skill-description position-absolute ps-4 pe-4 d-none">
+					<span class="close-button d-block mt-3 text-end pe-2">x</span>
+					<p class="mt-1">Oi</p>
+				</div>
+				<span class="position-absolute" id="reset-button">Redefinir
+				</span>
 			</div>
 			
 			<div class="confirm-reset-screen position-absolute h-100 w-100 d-none">
