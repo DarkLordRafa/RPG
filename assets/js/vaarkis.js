@@ -43,11 +43,14 @@ const skillDescriptionScreenCloseButton = document.querySelector(".skill-descrip
 const skillDescriptionText = document.querySelector(".skill-description p");
 const skill1Label = document.querySelector("#skill1-label");
 const skill2Label = document.querySelector("#skill2-label");
+const transformationLabel = document.querySelector("#transformation-label");
 
 const skill1 = document.querySelector("#skill1");
 const skill2 = document.querySelector("#skill2");
 
-const skill1Text = "";
+const skill1Text = 'Hemomancia : Controle total do sangue.<br/> "Dizem ser possível matar o oponente de dentro para fora com isso, mas só alguns de sangue puro conseguem".';
+const skill2Text = 'Frenesi: Se transformar na sua real forma.<br/>"Dizem ser preciso perder bem mais que apenas a sanidade para se transformar em tal forma".';
+const transformationText = 'Transformação: Pode se transformar em qualquer animal.<br/>"Até um vampiro pode ter presas de lobo".';
 
 
 
@@ -234,4 +237,16 @@ statsAreaSwitchButton.addEventListener("click", function(){
 
 skillDescriptionScreenCloseButton.addEventListener("click", function(){
 	skillDescriptionScreen.classList.add("d-none");
+});
+
+skill1Label.addEventListener("click", function(){
+	displayDescriptionScreen(skill1Text);
+});
+
+skill2Label.addEventListener("click", function(){
+	displayDescriptionScreen(skill2Text);
+});
+
+transformationLabel.addEventListener("click", function(){
+	displayDescriptionScreen(transformationText);
 });
