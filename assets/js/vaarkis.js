@@ -234,7 +234,11 @@ statsAreaToggleButton.addEventListener("click", function(){
 });
 
 statsAreaSwitchButton.addEventListener("click", function(){
-	skillsArea.classList.toggle("d-none");
+	statsArea.classList.add("stats-area-disabled");
+	setTimeout(function(){
+		skillsArea.classList.toggle("d-none");
+		statsArea.classList.remove("stats-area-disabled");
+	}, 700);
 });
 
 skillDescriptionScreenCloseButton.addEventListener("click", function(){
