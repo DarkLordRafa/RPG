@@ -145,6 +145,8 @@ function changeHpMp(bar, barValue, propertyName, maxPropertyName){
 
 function displayDescriptionScreen(text){
 	skillDescriptionScreen.classList.remove("d-none");
+	statsAreaToggleButton.classList.add("pe-none");
+	statsAreaSwitchButton.classList.add("pe-none");
 	skillDescriptionText.innerHTML = text;
 }
 
@@ -236,6 +238,8 @@ statsAreaSwitchButton.addEventListener("click", function(){
 });
 
 skillDescriptionScreenCloseButton.addEventListener("click", function(){
+	statsAreaToggleButton.classList.remove("pe-none");
+	statsAreaSwitchButton.classList.remove("pe-none");
 	skillDescriptionScreen.classList.add("d-none");
 });
 
