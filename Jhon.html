@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jhon</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable='no'" />
+		<meta name="theme-color" content="black" />
+		<link rel="stylesheet" href="assets/bootstrap5/css/bootstrap.min.css" type="text/css" />
+		<link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+		<link rel="stylesheet" href="assets/css/reset.css" type="text/css" />
+		<link rel="shortcut icon" href="assets/images/icons/favicon.png" type="image/png" sizes="32x32" />
+		<meta property="og:url" content="https://vampire-rpg.netlify.app/jhon">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://vampire-rpg.netlify.app/assets/images/general/thumb.jpg">
+		<meta property="og:title" content="Vampires - RPG">
+		<meta property="og:description" content="App para salvar nossas fichas de personagens">
+	</head>
+	<body class="jhon-page">
+		
+		<main class="d-flex flex-column align-items-center position-relative h-100 w-100">
+			<h1 class="character-name mt-2">Jhon</h1>
+			
+			<div class="return-button position-absolute">
+				<a href="index.html">
+					<img src="assets/images/icons/return.png" />
+				</a>
+			</div>
+			
+			<div class="character-stats-toggle-button position-absolute d-flex justify-content-center align-items-center">
+				<img src="assets/images/icons/toggle_button.png" />
+			</div>
+			
+			<div class="character-stats-switch-button position-absolute d-flex justify-content-center align-items-center">
+				<img src="assets/images/icons/switch.png" />
+			</div>
+			
+			<div class="stats-area position-absolute d-flex flex-column align-items-center">
+				<div class="attributes-area d-flex flex-column align-items-center position-absolute">
+					<h2 class="mt-3">Atributos</h2>
+					<ul class="ps-0 mb-0 mt-1 d-flex flex-column justify-content-center align-items-center">
+						<li class="mb-1 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/strength.png" />
+								<span class="attribute">
+									Força
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="strength-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="strength">
+									1
+								</span>
+								<span class="attribute-icon" id="strength-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="mb-1 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/defense.png" />
+								<span class="attribute">
+									Defesa
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="defense-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="defense">
+									1
+								</span>
+								<span class="attribute-icon" id="defense-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="mb-1 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/agility.png" />
+								<span class="attribute">
+									Agilidade
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="agility-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="agility">
+									1
+								</span>
+								<span class="attribute-icon" id="agility-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/perception.png" />
+								<span class="attribute">
+									Percepção
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="perception-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="perception">
+									1
+								</span>
+								<span class="attribute-icon" id="perception-increase">
+									+
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="skills-area d-flex flex-column align-items-center position-absolute d-none">
+					<h2 class="mt-3">Habilidades</h2>
+					<ul class="ps-0 mb-3 mt-1 d-flex flex-column justify-content-center align-items-center">
+						<li class="mb-1 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/jhon_skill1.png" />
+								<span class="skill" id="skill1-label">
+									Combustão
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="skill1-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="skill1">
+									1
+								</span>
+								<span class="attribute-icon" id="skill1-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="mb-1 d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/jhon_skill2.png" />
+								<span class="skill" id="skill2-label">
+									Berserk
+								</span>
+							</div>
+							<div class="block2 d-flex justify-content-center align-items-center">
+								<span class="attribute-icon" id="skill2-decrease">
+									-
+								</span>
+								<span class="ms-3 me-3" id="skill2">
+									1
+								</span>
+								<span class="attribute-icon" id="skill2-increase">
+									+
+								</span>
+							</div>
+						</li>
+						<li class="d-flex align-items-center justify-content-between">
+							<div class="block1 d-flex align-items-center">
+								<img class="me-2" src="assets/images/icons/transform.png" />
+								<span class="skill" id="transformation-label">
+									Transformação
+								</span>
+							</div>
+						</li>
+					</ul>
+					<span class="hp-mp-text">Vida</span>
+					<div class="life-bar-area">
+						<div class="life-bar">
+						</div>
+						<span class="life-value">
+							1
+						</span>
+					</div>
+					<span class="hp-mp-text">Mana</span>
+					<div class="mana-bar-area">
+						<div class="mana-bar">
+						</div>
+						<span class="mana-value">
+							1
+						</span>
+					</div>
+				</div>
+				
+				<div class="skill-description position-absolute ps-4 pe-4 d-none">
+					<span class="close-button d-block mt-3 text-end pe-2">x</span>
+					<p class="mt-1">Oi</p>
+				</div>
+				<span class="position-absolute" id="reset-button">Redefinir
+				</span>
+			</div>
+			
+			<div class="confirm-reset-screen position-absolute h-100 w-100 d-none">
+				<div class="confirm-reset-screen__content d-flex flex-column justify-content-center align-items-center p-3">
+					<h3>Quer mesmo redefinir os atributos do personagem?</h3>
+					<div class="confirm-reset-buttons-area d-flex mt-2">
+						<div class="cancel-reset-button me-3">
+							Não
+						</div>
+						<div class="confirm-reset-button">
+							Sim
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		
+		<script src="assets/js/jhon.js" type="text/javascript">
+		</script>
+	</body>
+</html>

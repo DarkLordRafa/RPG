@@ -48,70 +48,70 @@ const transformationLabel = document.querySelector("#transformation-label");
 const skill1 = document.querySelector("#skill1");
 const skill2 = document.querySelector("#skill2");
 
-const skill1Text = 'Hemomancia: Controle total do sangue.<br/> "Dizem ser possível matar o oponente de dentro para fora com isso, mas só alguns de sangue puro conseguem".';
-const skill2Text = 'Frenesi: Se transformar na sua real forma.<br/>"Dizem ser preciso perder bem mais que apenas a sanidade para se transformar em tal forma".';
+const skill1Text = 'Combustão: Combustão.';
+const skill2Text = 'Berserk: Berserk.';
 const transformationText = 'Transformação: Pode se transformar em qualquer animal.<br/>"Até um vampiro pode ter presas de lobo".';
 
 
 
-let vaarkis;
+let jhon;
 
 
 function increaseAttribute(propertyName, element){
-	vaarkis[propertyName] ++;
-	element.innerHTML = vaarkis[propertyName];
+	jhon[propertyName] ++;
+	element.innerHTML = jhon[propertyName];
 }
 
 function decreaseAttribute(propertyName, element){
-	vaarkis[propertyName] --;
-	element.innerHTML = vaarkis[propertyName];
+	jhon[propertyName] --;
+	element.innerHTML = jhon[propertyName];
 }
 
 function displayAttributes(){
-	lifeValue.innerHTML = vaarkis.life;
-	manaValue.innerHTML = vaarkis.mana;
-	lifeBar.style.width = `${percentage(vaarkis.life, vaarkis.maxLife)}%`;
-	manaBar.style.width = `${percentage(vaarkis.mana, vaarkis.maxMana)}%`;
-	strengthAttribute.innerHTML = vaarkis.strength;
-	defenseAttribute.innerHTML = vaarkis.defense;
-	agilityAttribute.innerHTML = vaarkis.agility;
-	perceptionAttribute.innerHTML = vaarkis.perception;
-	skill1.innerHTML = vaarkis.skill1;
-	skill2.innerHTML = vaarkis.skill2;
+	lifeValue.innerHTML = jhon.life;
+	manaValue.innerHTML = jhon.mana;
+	lifeBar.style.width = `${percentage(jhon.life, jhon.maxLife)}%`;
+	manaBar.style.width = `${percentage(jhon.mana, jhon.maxMana)}%`;
+	strengthAttribute.innerHTML = jhon.strength;
+	defenseAttribute.innerHTML = jhon.defense;
+	agilityAttribute.innerHTML = jhon.agility;
+	perceptionAttribute.innerHTML = jhon.perception;
+	skill1.innerHTML = jhon.skill1;
+	skill2.innerHTML = jhon.skill2;
 }
 
 function resetStats(){
-	window.localStorage.removeItem("vaarkis_key");
-	getVaarkis();
+	window.localStorage.removeItem("jhon_key");
+	getJhon();
 	displayAttributes();
 	confirmResetScreen.classList.add("d-none");
 }
 
 
-const getVaarkis = () =>{
+const getJhon = () =>{
 	try {
 	//Variável recebendo o objeto salvo (não significa que ele exista, sendo assim, o teste não falha mesmo se o objeto não existir)
-		vaarkis = JSON.parse(window.localStorage.getItem("vaarkis_key"));
-	//Já a partir daqui, o código tenta atribuir os valores salvos no objeto da variável aos elementos html, algo que só vai acontecer se a variável vaarkis possuir esses valores, ou seja, se ela recebeu um objeto salvo no localStorage.
+		jhon = JSON.parse(window.localStorage.getItem("jhon_key"));
+	//Já a partir daqui, o código tenta atribuir os valores salvos no objeto da variável aos elementos html, algo que só vai acontecer se a variável jhon possuir esses valores, ou seja, se ela recebeu um objeto salvo no localStorage.
 	
 	//Se os elementos não conseguirem receber os valores, significa que essees valores não existem, assim como o objeto requisitado, então o teste falha e passa para o catch
-		lifeValue.innerHTML = vaarkis.life;
-		manaValue.innerHTML = vaarkis.mana;
-		lifeBar.style.width = `${percentage(vaarkis.life, vaarkis.maxLife)}%`;
-		manaBar.style.width = `${percentage(vaarkis.mana, vaarkis.maxMana)}%`;
-		strengthAttribute.innerHTML = vaarkis.strength;
-		defenseAttribute.innerHTML = vaarkis.defense;
-		agilityAttribute.innerHTML = vaarkis.agility;
-		perceptionAttribute.innerHTML = vaarkis.perception;
-		skill1.innerHTML = vaarkis.skill1;
-		skill2.innerHTML = vaarkis.skill2;
+		lifeValue.innerHTML = jhon.life;
+		manaValue.innerHTML = jhon.mana;
+		lifeBar.style.width = `${percentage(jhon.life, jhon.maxLife)}%`;
+		manaBar.style.width = `${percentage(jhon.mana, jhon.maxMana)}%`;
+		strengthAttribute.innerHTML = jhon.strength;
+		defenseAttribute.innerHTML = jhon.defense;
+		agilityAttribute.innerHTML = jhon.agility;
+		perceptionAttribute.innerHTML = jhon.perception;
+		skill1.innerHTML = jhon.skill1;
+		skill2.innerHTML = jhon.skill2;
 	}
 	catch {
-		vaarkis = {
-		life: 250,
-		mana: 200,
-		maxLife: 250,
-		maxMana: 200,
+		jhon = {
+		life: 275,
+		mana: 100,
+		maxLife: 275,
+		maxMana: 100,
 		strength: 1,
 		defense: 1,
 		agility: 1,
@@ -125,7 +125,7 @@ const getVaarkis = () =>{
 	}
 };
 
-getVaarkis();
+getJhon();
 
 
 function percentage(numA, numB){
@@ -135,11 +135,11 @@ function percentage(numA, numB){
 function changeHpMp(bar, barValue, propertyName, maxPropertyName){
 	let newValue = prompt("Insira o novo valor:");
 	if (newValue !== "" && newValue !== null){
-		vaarkis[propertyName] = newValue;
-		bar.style.width = `${percentage(vaarkis[propertyName], vaarkis[maxPropertyName])}%`;
+		jhon[propertyName] = newValue;
+		bar.style.width = `${percentage(jhon[propertyName], jhon[maxPropertyName])}%`;
 	}
-	barValue.innerHTML = vaarkis[propertyName];
-	window.localStorage.setItem("vaarkis_key", JSON.stringify(vaarkis));
+	barValue.innerHTML = jhon[propertyName];
+	window.localStorage.setItem("jhon_key", JSON.stringify(jhon));
 }
 
 
@@ -209,7 +209,7 @@ manaValue.addEventListener("click", function(){
 
 attributeButtons.forEach(function(element){
 	element.addEventListener("click", function(){
-		window.localStorage.setItem("vaarkis_key", JSON.stringify(vaarkis));
+		window.localStorage.setItem("jhon_key", JSON.stringify(jhon));
 	});
 });
 

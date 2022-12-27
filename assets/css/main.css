@@ -38,6 +38,13 @@
 	background-size: cover;
 }
 
+.jhon-page{
+	background-image: url("../images/general/jhon.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
 .character-name{
 	font-family: "Noto";
 	font-size: 7vw;
