@@ -135,6 +135,9 @@ function percentage(numA, numB){
 function changeHpMp(bar, barValue, propertyName, maxPropertyName){
 	let newValue = prompt("Insira o novo valor:");
 	if (newValue !== "" && newValue !== null){
+		if (newValue > vaarkis[maxPropertyName]){
+			vaarkis[maxPropertyName] = newValue;
+		}
 		vaarkis[propertyName] = newValue;
 		bar.style.width = `${percentage(vaarkis[propertyName], vaarkis[maxPropertyName])}%`;
 	}
