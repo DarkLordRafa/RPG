@@ -108,10 +108,10 @@ const getVaarkis = () =>{
 	}
 	catch {
 		vaarkis = {
-		life: 250,
-		mana: 200,
-		maxLife: 250,
-		maxMana: 200,
+		life: 25,
+		mana: 20,
+		maxLife: 25,
+		maxMana: 20,
 		strength: 1,
 		defense: 1,
 		agility: 1,

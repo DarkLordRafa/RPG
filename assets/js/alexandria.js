@@ -108,10 +108,10 @@ const getAlexandria = () =>{
 	}
 	catch {
 		alexandria = {
-		life: 300,
-		mana: 100,
-		maxLife: 300,
-		maxMana: 100,
+		life: 30,
+		mana: 20,
+		maxLife: 30,
+		maxMana: 20,
 		strength: 1,
 		defense: 1,
 		agility: 1,

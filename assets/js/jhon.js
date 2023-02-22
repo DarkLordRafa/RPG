@@ -108,10 +108,10 @@ const getJhon = () =>{
 	}
 	catch {
 		jhon = {
-		life: 275,
-		mana: 100,
-		maxLife: 275,
-		maxMana: 100,
+		life: 20,
+		mana: 20,
+		maxLife: 20,
+		maxMana: 20,
 		strength: 1,
 		defense: 1,
 		agility: 1,
