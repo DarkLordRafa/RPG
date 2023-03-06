@@ -133,7 +133,7 @@ function percentage(numA, numB){
 }
 
 function changeHpMp(bar, barValue, propertyName, maxPropertyName){
-	let newValue = prompt("Insira o novo valor:");
+	let newValue = parseInt(prompt("Insira o novo valor:"));
 	if (newValue !== "" && newValue !== null){
 		if (newValue > jhon[maxPropertyName]){
 			jhon[maxPropertyName] = newValue;
