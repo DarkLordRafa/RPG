@@ -134,7 +134,10 @@ function percentage(numA, numB){
 
 function changeHpMp(bar, barValue, propertyName, maxPropertyName){
 	let newValue = parseInt(prompt("Insira o novo valor:"));
-	if (newValue !== "" && newValue !== null){
+	if (isNaN(newValue)){
+		newValue = 00;
+	}
+	if (newValue !== "" && newValue !== null && newValue !== 00){
 		if (newValue > vaarkis[maxPropertyName]){
 			vaarkis[maxPropertyName] = newValue;
 		}
